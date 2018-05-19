@@ -1,0 +1,195 @@
+body {
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  color: #2d3c49;
+  margin: 0;
+	padding: 0;
+	width: 100%;
+  max-width: 100%;
+	height: 100%;
+}
+
+.body-header-container {
+	display: flex;
+  justify-content: flex-start;
+	flex-wrap: wrap;
+	flex-direction: column;
+  max-width: 100%;
+	width: 900px;
+  border-bottom: 3px solid #ffff00;
+  box-shadow: 5px 5px #9aa;
+  height: 140px;
+  background-color: #000000;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#udacity img {
+  position: relative;
+  top: 20px;
+  height: 100px;
+  width: 216px;
+}
+
+#header-content h1 {
+  position: relative;
+  top: 25px;
+  text-align: right;
+  padding: 0 10px;
+	color: #6ebae7;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+#header-content h2 {
+  position: relative;
+  top: 50px;
+	text-align: right;
+  padding: 0 10px;
+	color: #6ebae7;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.images-container {
+  display: grid;
+  position: absolute;
+  left: 0px;
+  /* If I get this zero, the web page does not work well. */
+  top: 5px;
+  bottom: 20px;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+/*  grid-template-rows: repeat(2, 250px);*/
+  /* I have set to 270 pixels minimum size. But it can be smaller too.
+  Under 270 pixels the images will be wider than the other elements.
+  There are under 270 pixels devices, but i need to include minimum one photo
+  - due to the prescript of the task - and the viewport - we learn so - is set
+   to 900 pixels maximum. If the viewport larger than 900 pixels,
+   the whole viewport stays in the middle. Obviously, it is much simpler
+    if you do not use such a limit.*/
+}
+
+#images {
+  position: relative;
+  width: 894px;
+  max-width: 100%;
+  margin: 0 auto 0 auto;
+  box-shadow: 3px 3px 3px 3px #9aa;
+}
+
+#images > a:hover {
+  background-color: #9aa;
+  transform: scale(1.05);
+}
+
+.images-container > a > div > img {
+    object-fit: cover;
+    width: 100%;
+/*    height: 100%;*/
+/*    margin-top: 25px;*/
+}
+
+.article-h1 {
+  color: #2c4a5c;
+  font-weight: bold;
+  font-size: 1em;
+  text-align: center;
+  padding: 10px;
+}
+
+.text-container {
+  max-width: 100%;
+  width: 900px;
+/*  padding: 10px;*/
+/*  border-bottom: 3px solid #ffff00;*/
+/*  box-shadow:  5px 5px #9aa;*/
+  min-height: 70px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+#text-box > header {
+  padding: 15px;
+  text-align: center;
+  font-size: 1.4em;
+  background-color: #369;
+  color: white;
+}
+
+main {
+  flex: 1;
+  padding: 20px;
+  text-align: justify;
+  color: #2c4a5c;
+}
+
+nav {
+  background-color: #f90;
+  padding: 5px;
+}
+
+aside {
+  padding: 5px;
+  background-color: #936;
+}
+
+footer {
+  grid-column: span 3;
+  padding: 5px;
+  text-align: center;
+  font-size: 1.4em;
+  background-color: #690;
+}
+
+#website-footer {
+  max-width: 100%;
+  width: 900px;
+/*  padding: 10px;*/
+/*  border-bottom: 3px solid #ffff00;*/
+/*  box-shadow:  5px 5px #9aa;*/
+  min-height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  color: white;
+
+}
+
+@media screen and (max-width: 600px) {
+  .body-header-container {
+  height: 70px;
+  }
+  #udacity img {
+  height: 50px;
+  width: 108px;
+  position: absolute;
+  /* Header's height = 70 px here and the icon's height= 50px here,
+  so far the icon will be on the header's center's line, if to:10px,
+   because the position is absolute.*/
+  top: 10px;
+}
+
+  #header-content h1 {
+    font-size: 1em;
+    position: absolute;
+    /*If top:16px, then the top of the text will be as high as
+     the top of the icon.*/
+    top: 16px;
+    right: 0px;
+  }
+
+  #header-content h2 {
+    font-size: 0.5em;
+    position: absolute;
+    top: 42px;
+    /* Basic rule: If possible, we do not use magical numbers in source code.
+    Because we can easily forget what it  means. Maybe It's free here if we describe
+    what it means this.*/
+    right: 0px;
+  }
+
+}
