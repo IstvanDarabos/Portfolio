@@ -1,3 +1,3 @@
 Start:
 
-https://github.com/IstvanDarabos/Portfolio/blob/master/proba1b.html
+https://rawgit.com/IstvanDarabos/Portfolio/master/proba1b.html
